@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Axiom Institute - Mentorship in Physics and Mathematics">
+    <meta name="description" content="Axiom Institute offers high-quality mentorship in Physics and Mathematics, helping students excel in their academic journey.">
+<meta name="keywords" content="Physics, Mathematics, Mentorship, Online Classes, Axiom Institute">
+<meta name="author" content="Ashish Vijay, Gaurav Narvaria">
+
+
+
+
+
+
+
+    
+    <title>Axiom Institute </title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Axiom</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#mentorship">Mentorship</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about-container">
+                <p>Welcome to Axiom Institute, where Ashish Vijay (NIT Trichy) and Gaurav Narvaria provide expert mentorship in Physics and Mathematics for grades 9 to 12. With years of experience in their respective fields, we are committed to delivering high-quality education through both live and recorded sessions.</p>
+            </div>
+            <div class="mentors">
+                <div class="mentor">
+                    <img src="images/ashish.jpg" alt="Ashish Vijay">
+                    <h3>Ashish Vijay</h3>
+                    <p>Expert in Physics, NIT Trichy</p>
+                </div>
+                <div class="mentor">
+                    <img src="images/gaurav.jpg" alt="Gaurav Narvaria">
+                    <h3>Gaurav Narvaria</h3>
+                    <p>Expert in Mathematics</p>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            .mentors {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 20px;
+            }
+            .mentor {
+                text-align: center;
+                max-width: 200px;
+            }
+            .mentor img {
+                width: 100%;
+                border-radius: 50%;
+            }
+            .mentor h3 {
+                margin-top: 10px;
+                font-size: 1.2em;
+            }
+            .mentor p {
+                font-size: 1em;
+                color: #555;
+            }
+        </style>
+
+        <!-- Mentorship Program Section -->
+        <section id="mentorship">
+            <h2>Mentorship Program</h2>
+            <div class="mentorship-container">
+                <p>Our mentorship program focuses on delivering in-depth knowledge in Physics and Mathematics for students in grades 9 to 12. Weekend classes are conducted every Saturday and Sunday, and we offer live classes as well as recorded sessions for flexible learning.</p>
+                <form id="demoForm">
+                    <input type="text" name="demo_name" placeholder="Your Name" required>
+                    <input type="tel" name="demo_phone" placeholder="Your Phone Number" required>
+                    <button type="submit" class="cta-button">Schedule a Live Demo</button>
+                </form>
+                <script>
+                    document.getElementById('demoForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        scheduleDemo();
+                    });
+              
+                </script>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <h2>Latest Blog Posts</h2>
+            <article>
+                <h3>Upcoming Physics Bootcamp</h3>
+                <p>Date: October 20, 2024</p>
+                <p>Join our exclusive Physics bootcamp to dive into Mechanics and Electromagnetism. Limited seats available.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <h3>Mathematics Masterclass for 9th and 10th Grade</h3>
+                <p>Date: October 27, 2024</p>
+                <p>Get ahead in your studies with our Mathematics masterclass, focusing on problem-solving techniques for algebra and geometry.</p>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <section id="contact">
+            <h3>Contact Us</h3>
+            <form id="contactForm">
+                <input type="text" name="user_name" placeholder="Your Name" required>
+                <input type="email" name="user_email" placeholder="Your Email" required>
+                <input type="tel" name="user_phone" placeholder="Your Phone Number" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        showSuccessMessage();
+                    });
+
+                    function showSuccessMessage() {
+                        // Create the alert container
+                        const alertContainer = document.createElement('div');
+                        alertContainer.className = 'alert-container';
+                        alertContainer.innerHTML = `
+                        <div class="alert-box">
+                            <p>Successfully submitted! Our team will contact you soon.</p>
+                            <button class="close-alert">Close</button>
+                        </div>
+                        `;
+                        document.body.appendChild(alertContainer);
+
+                        // Add event listener to close button
+                        document.querySelector('.close-alert').addEventListener('click', function() {
+                            document.body.removeChild(alertContainer);
+                        });
+
+                        // Automatically remove the alert after 5 seconds
+                        setTimeout(function() {
+                            if (document.body.contains(alertContainer)) {
+                                document.body.removeChild(alertContainer);
+                            }
+                        }, 5000);
+                    }
+                </script>
+                <style>
+                    .alert-container {
+                        position: fixed;
+                        top: 20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: #4CAF50;
+                        color: white;
+                        padding: 15px;
+                        border-radius: 5px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        z-index: 1000;
+                        animation: fadeIn 0.5s;
+                    }
+                    .alert-box {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    .close-alert {
+                        background: none;
+                        border: none;
+                        color: white;
+                        font-size: 1.2em;
+                        cursor: pointer;
+                    }
+                    @keyframes fadeIn {
+                        from { opacity: 0; }
+                        to { opacity: 1; }
+                    }
+                </style>
+            </form>
+            
+        </section>
+
+        <div class="social-links">
+            <a href="#" target="_blank">Facebook</a> |
+            <a href="#" target="_blank">Instagram</a> |
+            <a href="#" target="_blank">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 Axiom Institute - All Rights Reserved</p>
+    </footer>
+
+    <script >
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Thank you for subscribing! We'll be in touch soon.");
+            // Here you could also add functionality to send form data to a backend service
+        });
+        
+        // Schedule Demo Button
+        function scheduleDemo() {
+            // Create the alert container
+            const alertContainer = document.createElement('div');
+            alertContainer.className = 'alert-container';
+            alertContainer.innerHTML = `
+            <div class="alert-box">
+                <p>Live Demo scheduled successfully! Our team will contact you soon.</p>
+                <button class="close-alert">Close</button>
+            </div>
+            `;
+            document.body.appendChild(alertContainer);
+
+            // Add event listener to close button
+            document.querySelector('.close-alert').addEventListener('click', function() {
+            document.body.removeChild(alertContainer);
+            });
+
+            // Automatically remove the alert after 5 seconds
+            setTimeout(function() {
+            if (document.body.contains(alertContainer)) {
+                document.body.removeChild(alertContainer);
+            }
+            }, 5000);
+        }
+
+        // Additional CSS for the alert
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .alert-container {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            animation: fadeIn 0.5s;
+            }
+            .alert-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+            .close-alert {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            }
+            @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Show/Hide Additional Resources
+        function toggleResources() {
+            const resourceSection = document.getElementById('resources');
+            if (resourceSection.style.display === 'none' || resourceSection.style.display === '') {
+                resourceSection.style.display = 'block';
+            } else {
+                resourceSection.style.display = 'none';
+            }
+        }
+    </script>
+    <!-- Include EmailJS script -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function() {
+       emailjs.init("Y6NEocuKSBkcjFHk6b");  // Replace with your EmailJS User ID from the dashboard
+   })();
+
+   document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_20h4vj4', 'template_7afhxd7', this)
+        .then(function() {
+            alert('Live Demo Scheduled! We will contact you shortly.');
+        }, function(error) {
+            console.log('FAILED...', error);
+        });
+});
+
+</script>
+
+</body>
+</html>
